@@ -1,0 +1,7 @@
+NM-RF-Hat Companion Hat Zero-Conflict
+
+pin config
+
+GPS RX?
+GPS TX?
+
