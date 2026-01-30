@@ -2,8 +2,13 @@ NM-RF-Hat Companion Hat Zero-Conflict
 
 pin config
 
+
 GPS RX_35?
 GPS TX_21?    note: There is a GPS bug due to the firmware . but starting from the following update: 1.11.1
+baudrate:9600
+
+GPS RX_35?
+GPS TX_21?  glitch for before 1.11.1
 
 IR RX-27
 IR TX-22 
