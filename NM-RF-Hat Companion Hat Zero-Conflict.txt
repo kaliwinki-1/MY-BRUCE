@@ -6,7 +6,8 @@ GPS RX_35?
 GPS TX_21?
 
 IR RX-27
-IR TX-22
+IR TX-22 note: There is a GPS bug due to the firmware starting from update 1.11.1.
+
 
 OOK_RX
 OOK_TX
