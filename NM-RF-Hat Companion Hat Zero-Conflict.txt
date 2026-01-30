@@ -2,6 +2,14 @@ NM-RF-Hat Companion Hat Zero-Conflict
 
 pin config
 
-GPS RX?
-GPS TX?
+GPS RX_35?
+GPS TX_21?
 
+IR RX-27
+IR TX-22
+
+OOK_RX
+OOK_TX
+
+CC1101_RX_22
+CC1101_TX_27
