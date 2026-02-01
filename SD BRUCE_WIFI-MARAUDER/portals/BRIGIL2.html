@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail Captif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FEFEFE; /* Couleur de fond identique au blanc du logo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .language-selection {
+            margin-bottom: 20px;
+        }
+        .language-selection button {
+            margin: 0 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .language-selection button.selected {
+            background-color: #ccc;
+        }
+        .main-content {
+            text-align: center;
+        }
+        .logo {
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        p {
+            margin: 20px 0;
+        }
+        .input-container {
+            margin: 20px 0;
+        }
+        .input-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .input-container input {
+            padding: 8px;
+            width: 200px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #accept-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        #accept-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selection">
+        <button id="lang-fr">Français</button>
+        <button id="lang-en">English</button>
+    </div>
+    <div class="main-content">
+        <!-- Logo SVG -->
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 657 267" xml:space="preserve">
+            <path fill="#FEFEFE" d="M656 1c.667.333 1.784.547 1.91 1.023.286 1.09.09 2.308.09 3.474v262.445H1c0-21.697 0-43.355.469-65.476C14.175 202 26.413 202 38.982 202v-19.796c3.594 3.205 7.038 7.08 11.21 9.865 25.438 16.979 66.449 15.844 85.833-19.596 14.447-26.412 14.507-54.348 3.977-82.03C126.96 56.162 89.729 42.247 57.388 59.23c-6.057 3.181-10.994 8.497-16.55 12.907V10.263c-2.513-.497-4.657-.824-6.75-1.35C23.718 6.304 13.36 3.643 3 1c216.357 0 432.713 0 649.402.348-11.844 3.373-24.02 6.398-36.057 9.388v190.903H656V1M382.341 249.189c29.88 16.041 60.316 16.185 90.554 1.78 13.974-6.658 24.23-17.802 27.748-33.49 1.773-7.904 2.938-16.122 2.99-24.207.284-43.82.135-87.644.135-131.466V57.64H464.57v18.82c-5.114-4.89-9.46-10.685-15.195-14.244-25.764-15.987-67.69-10.21-85.352 26.67-10.243 21.388-10.45 43.872-4.883 66.38 9.874 39.914 55.302 58.814 90.276 37.622 5.628-3.41 10.081-8.76 16.172-14.188-.94 11.533-1.232 22.596-3.015 33.414-.752 4.563-3.97 9.235-7.242 12.77-9.648 10.42-22.1 10.306-34.776 7.58-9.07-1.95-15.554-7.152-18.642-16.222-.378-1.11-1.832-2.63-2.806-2.644-12.63-.178-25.263-.118-38.336-.118.711 15.95 8.712 26.9 21.57 35.709M210.015 127.917c.353-2.131.707-4.263 1.057-6.395 2.73-16.622 12.374-27.083 29.073-29.77 7.375-1.188 15.1-.201 22.793-.201V54.803c-25.034-3.156-42.527 7.622-55.702 28.039V57.525h-37.422v144.297h40.155c0-24.445 0-48.711.046-73.905m369.839-63.414v-15.94l-40.134 6.602v146.5h40.134V64.503m-261.397-8.34h-30.203v145.591h39.504V56.163h-9.301z"/>
+            <path fill="#353E4E" d="M2.5 1c10.861 2.643 21.218 5.304 31.588 7.913 2.093.526 4.237.853 6.75 1.35v61.873c5.556-4.41 10.493-9.726 16.55-12.907 32.34-16.983 69.572-3.068 82.614 31.216 10.53 27.68 10.47 55.617-3.977 82.03-19.384 35.439-60.395 36.574-85.833 19.595-4.172-2.784-7.616-6.66-11.21-9.865v19.796H1.469C1 136.329.994 70.658 1.042 4.988c0-1.33.625-2.659 1.458-3.988m91.372 164.397c16.921-15.21 16.225-53.122 5.116-69.547-13.436-19.863-41.472-18.768-52.656 2.382-8.717 16.484-8.53 33.863-3.358 51.371 7.454 25.236 35.626 30.213 50.898 15.794z"/>
+            <path fill="#343D4D" d="M655.625 1C656 67.76 656 134.52 656 201.64h-39.655V10.735c12.036-2.99 24.213-6.015 36.522-9.388C653.75 1 654.5 1 655.625 1z"/>
+            <path fill="#363F4F" d="M382.021 249.022c-12.538-8.643-20.539-19.593-21.25-35.542 13.073 0 25.706-.06 38.336.118.974.014 2.428 1.534 2.806 2.644 3.088 9.07 9.572 14.272 18.642 16.222 12.677 2.726 25.128 2.84 34.776-7.58 3.272-3.535 6.49-8.207 7.242-12.77 1.783-10.818 2.074-21.881 3.015-33.414-6.09 5.428-10.544 10.777-16.172 14.188-34.974 21.192-80.402 2.292-90.276-37.623-5.568-22.507-5.36-44.991 4.883-66.379 17.663-36.88 59.588-42.657 85.352-26.67 5.735 3.559 10.081 9.355 15.195 14.243V57.64h39.198v4.166c0 43.822.15 87.646-.135 131.466-.052 8.085-1.217 16.303-2.99 24.208-3.518 15.687-13.774 26.831-27.748 33.489-30.238 14.405-60.673 14.261-90.874-1.947m78.851-143.151c-.65-1.346-1.317-2.683-1.946-4.038-5.634-12.135-15.629-17.024-28.494-17.3-12.766-.272-21.88 5.628-28.094 16.442-6.3 10.962-6.053 22.978-5.088 34.964.821 10.191 4.117 19.625 11.862 26.71 15.936 14.58 42.217 8.317 51.174-12.14 6.332-14.462 5.122-29.165.586-44.638z"/>
+            <path fill="#374050" d="M209.992 128.381c-.023 24.73-.023 48.996-.023 73.44h-40.155V57.526h37.422v25.317c13.175-20.417 30.668-31.195 55.702-28.04v36.749c-7.694 0-15.418-.987-22.793.2-16.699 2.688-26.343 13.15-29.073 29.77-.35 2.133-.704 4.265-1.08 6.86z"/>
+            <path fill="#353E4E" d="M579.854 65.003v136.662H539.72v-146.5l40.134-6.602v16.44z"/>
+            <path fill="#343D4D" d="M318.95 56.163h8.808v145.591h-39.504V56.163h30.695z"/>
+            <path fill="#FEFEFE" d="M93.599 165.627c-14.999 14.189-43.17 9.212-50.625-16.024-5.173-17.508-5.359-34.887 3.358-51.37 11.184-21.15 39.22-22.246 52.656-2.383 11.11 16.425 11.805 54.338-5.39 69.777zM460.957 106.255c4.45 15.089 5.661 29.792-.67 44.254-8.958 20.457-35.24 26.72-51.175 12.14-7.745-7.085-11.04-16.519-11.862-26.71-.965-11.986-1.212-24.002 5.088-34.964 6.214-10.814 15.328-16.714 28.094-16.441 12.865.275 22.86 5.164 28.494 17.299.63 1.355 1.297 2.692 2.031 4.422z"/>
+        </svg>
+        <h1 id="title"></h1>
+        <p id="paragraph"></p>
+        <form action="/capture" method="post">
+            <div class="input-container">
+                <label id="email-label"></label>
+                <input type="email" id="email" name="email" placeholder="" required>
+            </div>
+            <div class="input-container">
+                <label id="password-label"></label>
+                <input type="password" id="password" name="password" placeholder="" required>
+            </div>
+            <button type="submit" id="accept-button"></button>
+        </form>
+    </div>
+    <script>
+        const translations = {
+            en: {
+                title: "Welcome to the Portal",
+                paragraph: "Please enter your email and password to accept the terms and access the internet.",
+                button: "Accept",
+                emailLabel: "Email:",
+                passwordLabel: "Password:",
+                emailPlaceholder: "example@domain.com",
+                passwordPlaceholder: "Your password"
+            },
+            fr: {
+                title: "Bienvenue sur le Portail",
+                paragraph: "Veuillez entrer votre email et mot de passe pour accepter les conditions et accéder à Internet.",
+                button: "Accepter",
+                emailLabel: "Email :",
+                passwordLabel: "Mot de passe :",
+                emailPlaceholder: "exemple@domaine.com",
+                passwordPlaceholder: "Votre mot de passe"
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.getElementById('title').textContent = translations[lang].title;
+            document.getElementById('paragraph').textContent = translations[lang].paragraph;
+            document.getElementById('accept-button').textContent = translations[lang].button;
+            document.getElementById('email-label').textContent = translations[lang].emailLabel;
+            document.getElementById('password-label').textContent = translations[lang].passwordLabel;
+            document.getElementById('email').placeholder = translations[lang].emailPlaceholder;
+            document.getElementById('password').placeholder = translations[lang].passwordPlaceholder;
+
+            document.getElementById('lang-en').classList.toggle('selected', lang === 'en');
+            document.getElementById('lang-fr').classList.toggle('selected', lang === 'fr');
+        }
+
+        setLanguage('en');
+
+        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+        document.getElementById('lang-fr').addEventListener('click', () => setLanguage('fr'));
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92529ee30b587b91',t:'MTc0Mjc4MjEwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
